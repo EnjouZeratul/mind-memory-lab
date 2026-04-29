@@ -1,0 +1,23 @@
+{
+  "name": "mind-memory-lab",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "npx --yes pnpm@9.15.0 -r run build",
+    "build:libs": "npx --yes pnpm@9.15.0 --filter @mind/agent-contract --filter @mind/kernel --filter @mind/workspace --filter @mind/memory --filter @mind/tools-core --filter @mind/adapters-llm --filter @mind/adapters-web-search --filter @mind/agent-host run build",
+    "build:native": "npx --yes pnpm@9.15.0 --filter @mind/native-mindmem run build",
+    "test": "npx --yes pnpm@9.15.0 -r run test",
+    "lint": "eslint packages apps --max-warnings 0",
+    "format": "prettier -w .",
+    "dev": "npm run build:libs && npx --yes pnpm@9.15.0 --filter @mind/web dev"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "globals": "^15.14.0",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2"
+  }
+}

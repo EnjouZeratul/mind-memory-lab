@@ -1,0 +1,15 @@
+{
+  "name": "@mind/native-mindmem",
+  "version": "0.1.0",
+  "private": true,
+  "description": "可选 N-API 绑定：调用 c/ 中的 mindmem 原语",
+  "main": "index.cjs",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "node-gyp": "^11.0.0"
+  }
+}

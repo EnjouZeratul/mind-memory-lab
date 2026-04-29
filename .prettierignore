@@ -1,0 +1,5 @@
+pnpm-lock.yaml
+dist
+dist-server
+build
+node_modules

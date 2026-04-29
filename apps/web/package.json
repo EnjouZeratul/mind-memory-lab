@@ -1,0 +1,41 @@
+{
+  "name": "@mind/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"pnpm dev:api\" \"pnpm dev:ui\"",
+    "dev:ui": "vite",
+    "dev:api": "tsx watch server.ts",
+    "build": "tsc -p tsconfig.server.json && vite build",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "@mind/adapters-llm": "workspace:*",
+    "@mind/adapters-web-search": "workspace:*",
+    "@mind/agent-contract": "workspace:*",
+    "@mind/agent-host": "workspace:*",
+    "@mind/kernel": "workspace:*",
+    "@mind/memory": "workspace:*",
+    "@mind/tools-core": "workspace:*",
+    "@mind/workspace": "workspace:*",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.2",
+    "@types/express": "^5.0.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.17.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.5"
+  }
+}
